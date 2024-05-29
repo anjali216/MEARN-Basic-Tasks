@@ -1,0 +1,160 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: rgb(180, 180, 237);
+    position: sticky;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+body{
+    background-color: rgba(136, 34, 42, 0.082);
+}
+
+
+ul{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul li{
+    margin: 10px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+i{
+    color: white;
+}
+
+a:hover{
+     text-shadow: 3px 4px 5px rgb(5, 5, 84); 
+     color: rgb(0, 0, 0);
+}
+
+
+
+i{
+    background-color: rgb(22, 94, 201);
+}
+
+video{
+  width: 100%;
+  
+}
+
+.row{
+    display: f
+}
+
+section h1{
+position: absolute;
+top: 50px;
+left: 0px;
+color: rgb(226, 97, 204);
+background-color: rgb(172, 152, 152);
+padding: 30px;
+}
+
+#text{
+    position: absolute;
+    top: 180%;
+    left: 30%;
+    height: 100px;
+    width: 60px;   
+   
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+
+ #about p{
+    text-align: justify;
+    font-size: 20px;
+    padding: 50px;
+ }
+
+ #about img{
+    height: 300px;
+    padding: 20px;
+    border-radius: 100%;
+ }
+ span{
+    font-size: xx-large;
+    color: blue;
+} 
+
+ #about h2{
+    text-align: center;
+    text-decoration: underline double;
+    margin: 10px;
+ }
+
+ h2:hover{
+    color: red;
+ }
+
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+.col:hover{
+ box-shadow: 4px 5px 6px 7px rgb(187, 83, 83);
+}
+
+.col img{
+    transition: width 2s, height 2s transform 2s; 
+ }
+
+.col img:hover{
+    width: 210px;
+    height: 210px;
+    transform: rotate(180deg);
+}
+
+ h4{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.row2{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+
+.col1{
+    border: 1px  solid black; 
+    padding: 20px;
+    margin: 10px;
+    background: linear-gradient(to top,rgba(10,10,111,0.2226) 50% ,white 50%);
+    transition: all 0.8s;
+    background-size: 100% 200%;
+    padding: 20px;
+}
+

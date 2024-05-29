@@ -1,0 +1,51 @@
+
+
+/*universal selector*/
+*{
+    background-color:blueviolet;
+    text-align: center;
+}
+
+
+/*Tag selector*/
+h1{
+    color: deepskyblue;
+}
+
+/*id selector*/
+
+#head{
+    color: indigo;
+}
+
+/*class selector*/
+.cls{
+    text-align: center;
+}
+
+h3,p{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+
+button{
+    background-color: black;
+    color: aliceblue;
+}
+
+button :hover{
+    background-color:aliceblue;
+    color:black;
+}
+
+p::first-line{
+    color: brown;
+}
+
+p::first-letter{
+    color: blue;
+    font-size: italic;
+    font-size: larger;
+}

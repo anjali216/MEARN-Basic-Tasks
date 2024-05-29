@@ -1,0 +1,34 @@
+h1{
+    color: rgb(136, 84, 21);
+    text-align: center;
+}
+
+div{
+    text-align: center;
+    background-color: rgb(116, 42, 165);
+    color: rgb(226, 116, 43);
+    padding: 25px;
+}
+
+div p{
+    text-align: justify;
+}
+ 
+div h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* media query width 400px width*/
+
+@media screen and (max-width:400px){
+    h1{
+        color: blue;
+    }
+}
+
+div{
+    width: 400px;
+    margin-left: 20px;
+    background-color: rgb(112, 177, 177);
+}

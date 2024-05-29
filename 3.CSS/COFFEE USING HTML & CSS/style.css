@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: rgba(146, 94, 94, 0.82);
+    position: sticky;
+    display: flex;
+}
+
+header h1{
+    color: brown;
+    padding: 5px;
+}
+header h1:hover{
+    color: rgb(116, 52, 52);
+}

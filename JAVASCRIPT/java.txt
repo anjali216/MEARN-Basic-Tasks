@@ -1,0 +1,38 @@
+Javascript
+==================
+- programming language
+- to provide behaviour& perform logical operations
+-to execute Javascriptwe need a runtime enviornment
+-Node js is used to provide this runtime enviornment
+- Run time enviornment includes Javascript engine, it compiles the code and execute it
+- By default browser has JS engine
+ eg: Chrome : v8
+   Mozilla : spider monkey
+   
+- extension for Javascript  file : .js
+- console.log() - is used to print output in terminal 
+
+Datatypes
+==================
+1. Primotive Datatypes
+       String- text
+       Number  -integers and decimal values
+       Boolean  -true/ false
+       undefined - variable declared, but no value assigned
+       null - no value at all
+2. Reference Type
+       Object: 
+          js Object
+          Array
+ ** Javascript is a dynamically typed language : we don't implicitly specify the type of value need to store in a variable. 
+         Js automatically recognnize its type
+** var keyword is used to declare a variable
+    variable is used to store a value
+
+
+    Basic commands in JS
+    ===================
+    1. console.log(): to print the output in terminal
+    2. var : to declare a variable inorder to hold a value
+    3. typeof : to return data type of that specific variable/value
+     

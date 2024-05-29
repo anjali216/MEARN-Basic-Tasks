@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(146, 94, 94, 0.82);
+    position: sticky;
+    top: 0px;
+}
+header h1{
+    color: beige;
+    text-align: center;
+    padding: 5px;
+}
+header h1:hover{
+    color: rgb(116, 52, 52);
+}
+
+.row{
+    height: 400px;
+    width: 100%;
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col{
+    height: 350px;
+    width: 250px;
+    background-color: rgba(114, 53, 53, 0.43);
+    text-align: center;
+}
+img{
+    height: 250px;
+    width: 250px;
+}
+h4{
+    color: purple;
+}
+button{
+margin: 5px;
+padding: 5px;
+background-color: blueviolet;
+color:bisque;
+}
+
+#banner{
+background-image: url("https://fortbragglibrary.org/wp-content/uploads/2017/12/Book-banner.jpg");
+width: 100%;
+height: 400px;
+background-position: center;
+background-attachment: fixed;
+
+}
+
+video{
+    background-attachment: fixed;
+}
+
+.row{
+    background-color: beige;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.row1{   
+    justify-content: space-around;
+}
+
+
+footer{
+    background-color: rgba(96, 6,6, 0.43) ;
+    padding: 20px;
+}

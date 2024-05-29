@@ -1,0 +1,19 @@
+
+
+div{
+    height: 550px;
+    width: 400px;
+    background-position: center;
+    border: 2px solid rgb(181, 162, 162);
+}
+h2{
+    font-family: serif;
+    background-color: blanchedalmond;
+    color: blueviolet;
+}
+h3{
+    color: green;
+}
+button{
+    color: rgb(228, 137, 18);
+}

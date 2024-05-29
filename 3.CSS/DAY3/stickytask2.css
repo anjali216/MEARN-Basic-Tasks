@@ -1,0 +1,12 @@
+.h{
+    width:100%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    position: sticky;
+    top:0;
+}
+
+.c{
+    padding: 10px;
+}
