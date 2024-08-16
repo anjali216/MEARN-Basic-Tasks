@@ -2,24 +2,519 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Times New Roman', Times, serif;
+   font-weight: 400;
+}
+
+nav a{
+   text-decoration: none;
+   color: white;
+}
+ 
+h1{
+    text-align: center;
 }
 
 
-h1{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divi{
+ display: flex;
+ justify-content: center;
+}
+
+.divi li{
+    padding: 20px;
+}
+
+/*to center the image*/
+header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:5px ;
+}
+
+header h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    font-weight: 500;
+    text-align: center;
+    color: whitesmoke;
 }
 
 header{
-    width: 100%;
-    background-color: rgba(146, 94, 94, 0.82);
-    position: sticky;
-    display: flex;
+    height: 180px;
+    background-image: url('https://img.freepik.com/free-photo/top-view-roasted-coffee-beans-scattered-white-background-with-copy-space_141793-7140.jpg?size=626&ext=jpg&ga=GA1.1.196539411.1717230715&semt=ais_user');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 
-header h1{
-    color: brown;
-    padding: 5px;
+#home{
+    
+    text-align: center;
 }
-header h1:hover{
-    color: rgb(116, 52, 52);
+
+#home h1{
+    font-size: 50px;
+    color: rgb(51, 24, 4);
+}
+
+h2{
+    color: rgb(64,33,11);
+    font-size: 40px;
+    text-align: center;
+}
+ 
+
+#home p{
+    text-align: justify;
+    color: rgb(69, 12 , 12);
+    width: 600px;
+    height: auto;
+    border: 5px;
+    border-style: groove;
+    border-color: rgb(96, 69, 49);
+    padding: 20px;
+    
+}
+
+
+#i{
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+
+ ul{
+    display: flex;
+    font-size: 20px;
+    list-style: none;
+    justify-content: space-evenly;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+ a{
+    text-decoration: none;
+    color: rgb(199, 167, 149);
+}
+
+
+a:hover{
+     text-shadow: 3px 4px 5px rgb(5, 5, 84); 
+     color: rgb(0, 0, 0);
+}
+
+
+#section1 p{
+    position: absolute;
+    top: 90%;
+    text-align: justify;
+    left: 5%;
+    padding-right: 700px;
+    color: white;
+    font-weight: 500;
+    border: 3px;
+    border-color: rgb(187, 119, 67);
+}
+
+#section1 p:hover{
+    width: 800px;
+    height: auto;
+    font-size: 30px;
+}
+
+#section1 h1{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+    font-size: large;
+    color: white;
+}
+
+#section1 h1:hover{
+    width: 800px;
+    height: auto;
+    font-size: 30px;
+}
+
+
+#types
+{
+    border: black;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: justify;
+    font-size: 22px;
+    background-color: rgba(64, 43, 34, 0.422);
+    background: linear-gradient(to top,rgba(134,34,42,0.82),50%,white 50% );
+    transition: all 0.5s;
+    background-size: 100% 200%;
+}
+
+#types:hover{
+    color: antiquewhite;
+ background-position: bottom;
+}
+
+#types p,li{
+ text-align: justify;
+}
+
+#types h3{
+    text-align: center;
+}
+
+
+ #about img{
+    height: 50px;
+    padding: 10px;
+    border-radius: 100%;
+ }
+
+ .d{
+ width: 60%;
+ height: 30%;
+ margin: 5px;
+ display: flex;
+ margin-left: 20%;
+ font-size: 25px;
+ color: rgb(74, 53, 37);
+}
+
+ h3{
+    text-align: center;
+    font-size: 30px;
+    color: brown ;
+}
+.d div
+{
+ width: 50%;
+}
+
+.d img
+{
+ width: 350px;
+ height: auto;
+ margin: 15px;
+ margin: 10px;
+ border-radius: 10px;
+ transition: width 2s, height 1.5s, transform 1s;
+}
+
+.d div
+{
+    width: 60%;
+}
+.d img
+{
+    width: 350px;
+    height: auto;
+    margin: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: width 2s, height 1.5s, transform 1s;
+}
+
+.d img:hover
+{
+    transform: rotate(360deg) scale(1.3) translateY(5%) translateX(5%);
+}
+
+.gallery
+{
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery img
+{
+    display: block;
+    height: 200px;
+    width: 300px;
+    margin-bottom: 50px;
+    border-radius: 4%;
+    border: 2px solid rgb(58, 10, 10);
+    box-shadow: 2px 2px 2px 3px rgba(148, 122, 122, 0.74);
+    transition: 1s;
+}
+
+.gallery img:hover
+{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+form{
+    margin: 20px;
+    padding: 0px 420px;
+    
+}
+
+td{
+    padding-bottom: 20px;
+}
+
+label{
+    display: inline-block;
+    width: 130px;
+}
+button{
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    font-size: medium;
+    color: white;
+    background-color: rgb(31, 6, 6);
+}
+
+
+footer 
+{
+    width: 100%;
+    height: auto;
+    background-color: rgb(181, 139, 110);
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.col
+{
+    display: flex;
+    margin: 20px;
+    font-size: 16px;
+}
+.col h5
+{
+    font-size: 20px;
+    color: rgb(69, 0, 0);
+}
+
+.col ul
+{
+    list-style: none;
+}
+
+.col li
+{
+   display: flex;
+}
+.col i
+{
+    padding: 10px;
+    color: rgb(80, 24, 13);
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .header-name {
+        font-size: 25px;
+    }
+
+    #header-button {
+        font-size: 16px;
+
+
+    }
+
+    .about-image {
+        width: 100%;
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+    #heading-div {
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    #heading-div h2 {
+        font-size: 20px;
+        height: 50px;
+        padding: 5px;
+        box-shadow: 5px 5px;
+    }
+
+    #banner img {
+        height: 300px;
+
+    }
+
+    #caffaine h3 {
+        margin-top: 140px;
+        left: 40%;
+        font-size: 16px;
+    }
+
+    #carousel-head-container {
+        height: 50px;
+    }
+
+    #carousel-heading {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .carousal1 img {
+        width: 100%;
+    }
+
+    #carousal-heading1,
+    #carousal-heading2,
+    #carousal-heading3 {
+        width: 40%;
+        font-size: 14px;
+        padding: 5px;
+        line-height: 18px;
+    }
+
+    #carousal-heading1 {
+        top: 20%;
+        left: 50%;
+        transform-origin: right;
+    }
+
+    #carousal-heading2,
+    #carousal-heading3 {
+        top: 35%;
+        left: 5%;
+        transform-origin: left;
+    }
+
+    #coffee {
+        height: 1000px;
+    }
+
+    #coffee h1 {
+        font-size: 30px;
+    }
+
+    #coffee h2 {
+        font-size: 20px;
+    }
+
+    #coffee-content {
+        width: 80%;
+
+        margin-left: 10%;
+        padding: 5px;
+    }
+
+    #coffee-para {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    #about-coffee-heading {
+        font-size: 30px;
+        margin-top: -20px;
+    }
+
+    #about-coffee-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-coffee-content img {
+        width: 300px;
+    }
+
+    #about-coffee-para {
+        width: 90%;
+        padding-right: 0;
+    }
+
+
+
+    .type1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #type3 img,
+    #type4 img {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }
+
+
+
+    .row {
+        flex-direction: column;
+
+    }
+
+    .col {
+        padding-top: 20px;
+        margin: 10px 0;
+    }
+
+
+    .col img {
+        width: 100%;
+        height: auto;
+    }
+
+    .col h3 {
+        font-size: 18px;
+    }
+
+    .col p {
+        font-size: 14px;
+    }
+
+
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .form {
+        width: 90%;
+        margin-left: 5%;
+        padding: 20px;
+    }
+
+    .contact Us button {
+        width: 100%;
+        margin: 20px 0 0 0;
+        font-size: 18px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        height: 660px;
+        padding: 10px;
+    }
+
+    .col {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+
 }

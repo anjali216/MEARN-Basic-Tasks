@@ -1,16 +1,80 @@
+header{
+    position: absolute;
+    top :0px;
+    margin: 0px;
+}
 
+header{
+    position:absolute;
+    top:0px;
+  
+    
+}
+#women
+{
+    background-color: rgb(212, 212, 212);
+}
+#nav
+{
+    position: absolute;
+    top: 0px;
+}
 
- nav ul{
+#nav-input
+{
+    background-color: transparent;
+    width: 450px;
+    height: 40px;
+    margin-left: 300px;
+}
+
+.nav-icons
+{
+    margin-left: 300px;
+}
+
+nav ul{
     display: flex;
     justify-content: center;
 }
 
-ul li{
+nav ul li{
+    padding: 8px;
     margin-top: 12px;
+
 }
 
+ul i{
+    padding: 6px;
+}
+ 
+
+ul li{
+    margin-top: 10px;
+}
 
 ul a{
     text-decoration: none;
     color: black;
 }
+
+footer h5
+{
+    font-weight: 400;
+}
+footer h6
+{
+    font-weight: 400;
+}
+#terms ul
+{
+    font-size: smaller;
+} 
+#low
+{
+    margin-left: 300px;
+}
+
+
+ 
+

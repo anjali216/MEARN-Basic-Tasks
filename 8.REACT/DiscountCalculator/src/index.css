@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Gupter", serif;
+}
+
+body{
+    background-color:beige;  
+}
+
+
+   .saved{
+    margin-top: 5px;
+    background-color:red;
+    border-radius: 5px;
+    text-align: center;
+    
+  } 
+  h1{
+    text-align: center;
+    padding: 10px;
+  }
+  h2{
+    text-align: center;
+    padding: 10px;
+  }
+  p{
+    text-align: center;
+   
+  }
+  .button{
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content:space-evenly;
+  
+  }
+  

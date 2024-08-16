@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>localStorage</h1>
+
+    <script>
+        localStorage.setItem("Username","Allen")
+
+        let student={
+            Rollno :1,
+            Name:"Rahul",
+            Batch:"MEARN STACK"
+        }
+
+        localStorage.setItem("student-details",JSON.stringify(student))
+
+        //getItem
+        var student_name =localStorage.getItem("Username")
+        console.log(student_name);
+
+        var student_data=JSON.parse(localStorage.getItem("student-details"))
+        console.log(student_data);
+     
+        localStorage.removeItem("student-details")
+        localStorage.removeItem("student_data")
+    </script>
+</body>
+</html>

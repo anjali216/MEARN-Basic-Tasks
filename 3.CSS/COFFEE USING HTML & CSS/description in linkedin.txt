@@ -1,0 +1,8 @@
+Coffee Website | HTML, CSS & Media Queries
+
+Designed and developed a visually appealing coffee website using HTML and CSS, incorporating media queries to ensure a responsive and adaptive design. Key features include:
+
+Responsive Design: Utilized media queries to create a fluid layout that adjusts seamlessly across desktops, tablets, and mobile devices.
+Modern Aesthetics: Leveraged CSS to craft a visually stunning interface that showcases coffee varieties, brewing tips, and brand story with vibrant imagery and stylish typography.
+Enhanced User Experience: Implemented interactive elements and optimized navigation to provide an intuitive and engaging user journey.
+This project highlights my ability to combine creative design with technical skills to deliver a functional, responsive web experience tailored for coffee lovers.

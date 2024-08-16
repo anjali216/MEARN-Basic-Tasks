@@ -1,0 +1,131 @@
+REACT 
+                                    -------------------------
+
+        PROJECT CREATION
+
+        1. npx create-react-app demo-app
+        2. cd demo-app
+        3. code .
+        4. npm start
+
+
+        PROJECT CREATION USING VITE  : https://vitejs.dev/
+
+        1. npx create vite@latest demo-app -- --template react 
+        2. cd demo-app
+        3. code .
+        4. npm install (For creating node modules)
+        5. npm run dev
+        
+        ------------------------------------------------------------------------------------------------------------------
+
+          Installing 3rd party Libraries
+
+       1. MDB boottstrap :https://mdbootstrap.com/
+
+          Steps : go to https://mdbootstrap.com/ -> docs-> react->get started-> installation
+
+           npm i mdb-react-ui-kit link for installation & apply this code in terminal
+
+       2 FONT AWESOME
+
+           npm i @fortawesome/fontawesome-free
+
+           CSS import
+
+          Add the following lines in your MAIN.js file before the App.js file import:
+
+           MAIN.JS
+
+               import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+               import "@fortawesome/fontawesome-free/css/all.min.css";
+
+           
+       3 GOOGLE FONTS
+
+              https://fonts.google.com/
+
+             <link rel="preconnect" href="https://fonts.googleapis.com">
+             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sevillana&display=swap" rel="stylesheet">
+               
+      4 ReactMaterial UI :https://mui.com/material-ui/
+        npm install @mui/material  @emotion/react @emotion/styled
+
+     5 React Bootstrap   
+        Link:  https://react-bootstrap.github.io/
+        
+    6  Icons
+        
+      React Icons  :
+      Links:-https://react-icons.github.io/react-icons/
+     Installation :npm install react-icons --save
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            BASICS CONCEPTS
+
+  1 DATA PASSING - ONE WAY DATA BINDING
+   2. EVENTS 
+   3.conditional Rendering
+    ->if->&& (truthy operator)
+     ->if else  ->?: 
+
+
+4. React routing
+https://reactrouter.com/en/main/router-components/browser-router
+
+install : npm install  react-router-dom
+  
+  Browser Router->A <BrowserRouter> stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
+  Routes ->Rendered anywhere in the app, <Routes> will match a set of child routes from the current location.
+  Route  ->Because the API and use cases for <Route /> includes data loading, mutations, and more, <Route> has its own documentation category.
+
+5. react bootstarp
+
+LINK-  https://react-bootstrap.github.io/
+
+INSTALLATION- npm install react-bootstrap bootstrap
+
+(FROM GETSTARTED)
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+
+
+   PROJECT CREATION
+                MEDIA APP FRONT-END CREATION
+     ---------------------------------------------------------------------------------------------------------
+
+ 1. Project creation : npm create vite@latest media-app-frontend -- -- template react
+ 2. cd media-app-frontend
+ 3. npm install
+ 4.code . 
+ 5. Run the Project: npm  run dev
+ 6. Clean your project code
+ 7. Install 3rd party libraries
+    ->React bootstrap
+    ->Font awesome
+    ->google-fonts
+
+
+
+
+
+
+bootswatch- for theme in bootstrap
+
+https://bootswatch.com/
+
+MEDIA PLAYER APP USING JSON  SERVER
+---------------------------------------------
+
+1 create a folder named on media-app-backend
+2inside it create a package.json file=>npm init or npm  init -y
+
+3npm install -g json-server=> npm install json-server
+4 create db.json file
+5 Run the file =>npx json-server db.json

@@ -1,0 +1,70 @@
+/*1. Write a program to find GCD/HCF of 2 numbers HCF (highest common factor)
+
+
+HCF(12,36)=12;
+
+12={1,12,2,6,3,4}
+
+36={1,36,2,18,3,12,4,9,6}
+*/
+
+
+
+
+
+
+/*2. Write a program to check a number armstrong or not
+input=153;
+output=1^3 + 5^3 + 3^3 = 1+125+27=153 */
+
+
+/*3. Write a program to print the pattern using nested looping
+    1
+    22
+    333
+    4444
+*/
+
+/*3. Write a program to print the pattern using nested looping - full pyramid
+                        
+                               *
+                             *    *
+                          *    *     *
+                       *    *     *     *
+*/
+
+/*4. Write a program to print the pattern using nested looping
+
+    1
+    2 3
+    4 5 6
+    7 8 9 10
+
+*/
+https://www.tutorialstonight.com/js/javascript-star-pattern
+
+
+answers:-
+
+2.
+// let i=1;
+// let str="";
+// let j=1;
+// for(i=1; i<=4;i++){
+//     str=""
+//     for(j=1;j<=1;j++){
+//         str=str+i;
+//     }
+//     console.log(str);
+// }
+
+5.let k=1;
+let i=1;
+let j=1;
+for (i=1;i<=5;i++){
+    let line='';
+    for(j=1;j<=1;j++){
+        line=line+k;
+        k++;
+    }
+}

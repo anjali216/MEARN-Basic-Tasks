@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <script src="./script.js"></script>
+</head>
+<body>
+
+    <h1 id ="head"></h1>
+    <h1 class="cls">DOM getElementById()</h1>
+       <p id="color">This is my First Paragraph</p>
+       <p>This is my Second Paragraph </p>
+       <p>This is my Third Paragraph</p>
+       <button onclick="colorChange1()">green</button> 
+       <button onclick="colorChange2()">blue</button> 
+       <button onclick="colorChange3()">red</button>
+
+
+    <script>
+        function colorChange1(){
+            document.getElementById("color").style.color="green"
+        }
+
+        function colorChange2(){
+            document.getElementById("color").style.color="blue"
+        }
+
+        function colorChange3(){
+            document.getElementById("color").style.color="red"
+        }
+
+        //document.getElementBy className
+      const doc1 = document.getElementsByClassName("cls")
+      console.log(doc1);//Html collection
+      console.log(Array.from(doc1));
+      console.log(Array.from(doc1).map(item=>item.style.color="blue"));
+    </script>
+     

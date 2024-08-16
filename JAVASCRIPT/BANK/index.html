@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</head>
+<body  style="background-color: #e3eaf0;">
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./images/clip.jpeg" alt="" height="50px" width="50px">
+            My Bank</a>
+            <div class="d-grid gap-2 d-md-block">
+                <button onclick="navigateToRegister()" class="btn btn-primary" type="button">Register</button>
+                <button onclick="navigateTorLogin()" class="btn btn-primary" type="button">Login</button>
+            </div>
+        </div>
+    </nav>        
+   
+  <div class="row d-flex flex-row m-3"  style="background-color: #e3eaf0;">
+    <div class="col-6" style="width: 600px; height: 200px; margin-top:50px;">
+        <h2>Online Bank</h2>
+        <p class="text-justify-custom">
+            Online Banking also known as Internet Banking,,virtual banking,web banking or home bankinvg, is asysytem that enables customers of a bank or other financial institution to conduct a rfange of financial transactions through the financial institution's website 
+            or mobile app. Since the early 2000s this has become the most common way that customers acess their bank accounts.
+        </p>
+     
+        <button class="btn btn-primary mt-3">Get Started</button>
+    </div>
+  </div>
+
+<div>
+    <h1 class="text-center">Features</h1>
+    <div class="row m-4">
+      <div class="col-4">
+        <img src="./images/trans.jpeg" alt="" height="200px" width="200px">
+        <h5 class="text-left">Transaction processing</h5>
+      </div>
+      <div class="col-4">
+        <img src="./images/account manage.jpeg" alt="" height="200px" width="200px">
+        <h5 class="text-left">Account management</h5>
+      </div>
+      <div class="col-4">
+        <img src="./images/fund.jpeg" alt="" height="200px" width="200px">
+        <h5 class="text-left">Fund transfer</h5>
+      </div>
+    </div>
+    <div class="row m-4">
+        <div class="col-4">
+        <img src="./images/Security.jpg" alt="" width="200px" height="200px">
+        <h5 class="text-left"> Excellent Security</h5>
+       </div>
+       <div class="col-4">
+       <img src="./images/bill.jpg" alt="" height="200px" width="200px">
+       <h5 class="text-left">Bill payment</h5>
+       </div>
+       <div class="col-4">
+        <img src="./images/mobile_banking.webp" alt="" height="200px" width="200px">
+         <h5 class="text-left">Mobile banking</h5>  
+       </div>
+    </div>
+</div>
+
+
+
+<!--footer-->
+<footer class="bg-light text-left py-4">
+
+    <div class="row mx-4 ">
+        <div class="col-4">
+           <h5>The Company</h5>
+           <div class="d-flex">
+              <div>
+               <ul class="list-unstyled me-4">
+                   <li class="">Home</li>
+                   <li class="">About Us</li>
+                  <li class="">Careers</li>
+                  <li class="">Media</li>
+                  <li class="">Contact Us</li>
+                </ul>
+              </div>
+           </div>
+        </div>
+
+        <div class="col-4">
+            <h5>Contact information</h5>
+            Canara bank,<br>
+            canarabank@gmail.com<br>
+            +9156489801<br>
+            India <br><br>
+        </div>
+
+        <div class="col">
+            <div>
+              <h4>Connect with Us:</h4>
+              <br>
+             <i class="fa-solid fa-phone"></i>
+             <i class="fa-brands fa-facebook-f"></i>
+             <i class="fa-brands fa-instagram"></i>
+             <i class="fa-brands fa-linkedin"></i>
+             <i class="fa-brands fa-x-twitter"></i>
+             <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <script>
+      function navigateToRegister(){
+        window.location="./register.html"
+      }
+    </script>
+</footer>
+</body>
+</html>

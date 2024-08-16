@@ -60,7 +60,7 @@ video{
 }
 
 .row{
-    display: f
+    display: flex;
 }
 
 section h1{
@@ -78,7 +78,7 @@ padding: 30px;
     left: 30%;
     height: 100px;
     width: 60px;   
-   
+
 }
 .row{
     display: flex;

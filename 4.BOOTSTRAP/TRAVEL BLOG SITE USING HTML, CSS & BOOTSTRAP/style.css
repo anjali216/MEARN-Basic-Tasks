@@ -1,0 +1,164 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Agbalumo", system-ui;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    display: flex;
+    align-items:center;
+    padding: 40px;
+    transition: 0.6s;
+    z-index: 10000;
+    
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 4px black;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+ header ul{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+   text-decoration: none;
+   color: #000;
+    margin: 15px;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+
+.home{
+    position: relative;
+    width: 100px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1,ifr);
+    align-items: center;
+}
+
+
+
+#about h1{
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+    font-size: large;
+    color: white;
+}
+
+#about p{
+    position: absolute;
+    top: 90%;
+    text-align: justify;
+    font-size: 20px;
+    left: 5%;
+    padding-right: 700px;
+    color:black;
+    font-weight: 500;
+    border: 2px solid rgb(58, 10, 10);
+    border-color: rgb(187, 119, 67);
+}
+
+#about h2{
+    text-decoration: underline;
+}
+
+.row1{   
+    display: flex;
+}
+
+.col2{
+    justify-content: space-around;
+    margin: 10px;
+    padding: 0%;   
+}
+
+
+.gallery
+{
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gallery h3{
+    text-decoration: underline;
+}
+.gallery img
+{
+    display: block;
+    height: 200px;
+    width: 400px;
+    margin-bottom: 60px;
+    border-radius: 4%;
+    border: 2px solid rgb(58, 10, 10);
+    box-shadow: 2px 2px 2px 3px rgba(148, 122, 122, 0.74);
+    transition: 1s;
+}
+
+
+    
+.gallery img:hover
+{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+
+
+form{
+    margin: 20px;
+    padding: 0px 420px;
+    
+}
+
+ h3{
+    text-decoration: underline;
+    text-align: center;
+}
+
+td{
+    padding-bottom: 20px;
+}
+
+label{
+    display: inline-block;
+    width: 130px;
+}
+button{
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    font-size: medium;
+    color: white;
+    background-color: black;
+}
+
+
+

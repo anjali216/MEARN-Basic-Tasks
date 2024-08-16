@@ -1,0 +1,25 @@
+.hero-section {
+    background: url(./images/360_F_535473874_OWCa2ohzXXNZgqnlzF9QETsnbrSO9pFS.jpg) no-repeat center center/cover;
+    color: rgb(247, 243, 243);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+                    HTML
+
+
+<section class="hero-section">
+      <h1> TRAVEL THE WORLD </h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae necessitatibus expedita laborum neque aperiam quis cum, quibusdam veritatis dolor quas beatae quod labore odio, molestias ullam similique error illum fugit!</p>
+
+    </section>

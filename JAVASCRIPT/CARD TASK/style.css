@@ -1,0 +1,18 @@
+@media screen and (max-width: 400px){
+    #result {
+        width: 300px; 
+        margin: 50px; 
+    } 
+   }
+   li{
+    list-style: none;
+   }
+   #result{
+    border: none; 
+   }
+   ul{
+    background-color: beige;
+    padding: 55px; 
+    border-radius: 30px; 
+    box-shadow: 1px 2px 3px; 
+}
