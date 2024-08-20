@@ -5,11 +5,10 @@ import Col from 'react-bootstrap/esm/Col'
 import { FaBackward } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
-
 function WatchHistory() {
   return (
     <div>
-      <Row className='mt-5'>
+       <Row className='mt-5'>
         <Col>
         <h1>Watch History</h1>
         </Col>
@@ -46,11 +45,17 @@ function WatchHistory() {
           <td className='border border-white'>Jacob</td>
           <td className='border border-white'>Thornton</td>
           <td className='border border-white' >@fat</td>
+          <td className='border border-white'>
+          <i className='btn btn-danger fa-solid fa-trash text-white m-3'></i>  
+          </td>
         </tr>
         <tr>
           <td className='border border-white'>3</td>
           <td className='border border-white'  colSpan={2}>Larry the Bird</td>
           <td className='border border-white'>@twitter</td>
+          <td className='border border-white'>
+          <i className='btn btn-danger fa-solid fa-trash text-white m-3'></i>  
+          </td>
         </tr>
       </tbody>
     </Table>

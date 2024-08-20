@@ -1,7 +1,6 @@
-
 //import axios
-// eslint-disable-next-line no-unused-vars, no-undef
-const axios= require ('axios')
+
+import axios  from 'axios'
 
 //API fetching configure=>get, post,put, delete
 export const commonAPI = async(httpMethod,url,reqBody)=>{
@@ -18,10 +17,8 @@ let reqConfig=  {
 
    })
 
-
  .catch((error)=>{
         return error
 })
-
 
 }

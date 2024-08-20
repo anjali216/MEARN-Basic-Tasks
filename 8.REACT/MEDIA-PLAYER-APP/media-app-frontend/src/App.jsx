@@ -1,29 +1,23 @@
 
 import './App.css'
-
-import { Routes,Route } from 'react-router-dom';
-import LandingPage from './Pages/LandingPage';
-import Home from './Pages/Home';
-import WatchHistory from './Pages/WatchHistory';
-import PageNotFound from './Pages/PageNotFound';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import {Routes,Route } from 'react-router-dom'
+import LandingPage from './Pages/LandingPage'
+import Home from './Pages/Home'
+import WatchHistory  from './Pages/WatchHistory'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 function App() {
   
 
   return (
     <>
     <Header/>
-     <Routes>
-    {/*landing page path : http://localhost:5173/ */}
-    <Route path='/' element={<LandingPage/>}/>
-    {/*home page path : http://localhost:5173/home*/}
-      <Route path='/home' element={<Home/>} />
-      {/*watch history page path : http://localhost:5173/watch-history*/}
-      <Route path='/watch-history'element={<WatchHistory/>}/>
-      <Route path='*' element={<PageNotFound/>}/>
-     </Routes>
-     <Footer/>
+      <Routes>
+        <Route path='/' element ={<LandingPage/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/watch-history' element={<WatchHistory/>} />
+      </Routes>
+       <Footer/>
     </>
   )
 }

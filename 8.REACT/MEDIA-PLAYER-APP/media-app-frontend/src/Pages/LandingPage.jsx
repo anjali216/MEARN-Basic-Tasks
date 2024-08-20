@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom';
 function LandingPage() {
   return (
     <div>
+      
       <section>
   <div className='row'>
   <div className='col-6 p-5'>
@@ -29,6 +30,7 @@ function LandingPage() {
   </div>
   </div>
 </section>
+
 
 <section>
   <h1 className='text-center'>Features</h1>
@@ -75,8 +77,9 @@ function LandingPage() {
  </Row>
 </section>
 
+
 <section>
-<Row className='border border-3 rounded m-5 p-5'>
+  <Row className='border border-3 rounded p-5'>
   <Col>
      <h3> Simple Fast And Powerful</h3> 
      <p style={{textAlign:'justify'}}> <strong>Upload Videos</strong> :Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias distinctio iste veniam at repellendus, illum, incidunt, deleniti quia maxime suscipit quam voluptate. Facere, quia officiis.
@@ -87,9 +90,9 @@ function LandingPage() {
      <p style={{textAlign:'justify'}}><strong>Categorize Content </strong>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias distinctio iste veniam at repellendus, illum, incidunt, deleniti quia maxime suscipit quam voluptate. Facere, quia officiis.
      Fugit aut odit modi nihil. </p>
   </Col>
+  <Col>
+  </Col>
 </Row>
-
-
 </section>
 
 

@@ -1,3 +1,4 @@
+
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Row from 'react-bootstrap/Row';
@@ -8,14 +9,21 @@ import { GrHistory } from "react-icons/gr";
 import AddCategory from '../Components/AddCategory';
 import ViewVideo from '../Components/ViewVideo';
 function Home() {
+  
+
+
   return (
     <div>
-<Row className='d-flex justify-content-between'>
-<Col className='d-flex'>
-<h3>Upload New Video</h3>
-   <AddVideo/>
-</Col>
-<Col>
+      
+      {/* const [AddVideoResponse,setAddVideoResponse]=useState([]) */}
+
+      <Row className='d-flex justify-content-between'>
+      <Col className='d-flex'>
+     <h3>Upload New Video</h3>
+       <AddVideo/>
+       {/* <AddVideo  setAddVideoResponse={setAddVideoResponse}/>  */}
+      </Col>
+     <Col>
   <Link to={'/watch-history'} style={{textDecoration:'none'}}>
     <h3>Watch History <GrHistory /> </h3>
   </Link>
@@ -26,7 +34,8 @@ function Home() {
   <Col lg={9}>
      {/* View Videos */}
      <h3>All Videos</h3>
-    <ViewVideo/>
+     <ViewVideo/>
+     {/* <ViewVideo  AddVideoResponse = {AddVideoResponse}/>  */}
   </Col>
 
   <Col lg={3}>
@@ -36,7 +45,7 @@ function Home() {
   </Col>
 </Row>
 
-</div>
+    </div>
   )
 }
 

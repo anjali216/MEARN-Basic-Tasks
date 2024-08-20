@@ -6,15 +6,15 @@ import { GiMusicalScore } from "react-icons/gi";
 function Header() {
   return (
     <div>
-      <Navbar className="bg-body-black">
+         <Navbar className="bg-body-black">
         <Container>
-          <Navbar.Brand href="#home" className='text-white fs-2'>
+          <Navbar.Brand href="#home"   className='text-white fs-2' >
           <GiMusicalScore className='me-3 fs-1' />
             <span className=' fs-6 fw-bolder'> Media Player</span>
           </Navbar.Brand>
         </Container>
       </Navbar>
-      </div>
+    </div>
   )
 }
 

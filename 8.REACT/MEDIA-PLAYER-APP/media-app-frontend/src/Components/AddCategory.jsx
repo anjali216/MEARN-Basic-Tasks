@@ -4,13 +4,15 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 function AddCategory() {
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+const [show, setShow] = useState(false);
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
+
   return (
     <div>
-      <div className="d-grid gap-2 me-3 mt-4">
+      
+    <div className="d-grid gap-2 me-3 mt-4">
       <Button variant="primary" size="lg"  onClick={handleShow}>  
       Add Category 
       </Button>
@@ -35,8 +37,7 @@ function AddCategory() {
           <Button variant="primary">Add</Button>
         </Modal.Footer>
       </Modal>
-      
-    </div>
+      </div>
   )
 }
 

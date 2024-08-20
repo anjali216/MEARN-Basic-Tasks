@@ -112,10 +112,6 @@ INSTALLATION- npm install react-bootstrap bootstrap
     ->google-fonts
 
 
-
-
-
-
 bootswatch- for theme in bootstrap
 
 https://bootswatch.com/
