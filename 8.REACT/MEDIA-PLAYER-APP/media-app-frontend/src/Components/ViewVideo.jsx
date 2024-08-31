@@ -1,61 +1,56 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react'
-import VideoCard from '../Components/VideoCard'
+import VideoCard from './VideoCard'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { getVideoAPI } from '../Services/AllApi';
+import { getVideoAPI } from '../Services/AllAPIs';
 
-// eslint-disable-next-line react/prop-types
 function ViewVideo({addVideoResponse}) {
 
-  const [allVideos,setAllVideos] = useState([])
+  const [allVideos,setAllVideos] = useState([]) 
+  const [deleteVideoStatus,setDeleteVideoStatus] = useState("")
 
-  const getVideos = async()=>{
+  const getVideos =async()=>{
    try{
     const response = await getVideoAPI()
     console.log(response.data);
     if(response.status>=200 && response.status<=300){
-      setAllVideos(response.data)
+        setAllVideos(response.data)//to assign videos to the state
     }
     else{
-      console.log(response.message);
+      console.log(response.message);//error message
       
     }
-    
    }
-
    catch(err){
     console.log(err);
     
    }
+    
   }
   useEffect(()=>{
     getVideos()
-  },[addVideoResponse])
-    
- 
-
+  },[addVideoResponse,deleteVideoStatus])
 
   return (
     <div>
       <Row className='p-5'>
-
-        {
-          allVideos.length > 0 ?
-          allVideos.map(item=>(
-             // eslint-disable-next-line react/jsx-key
-             <Col>
-    <VideoCard displayVideo={item}/>
-    </Col>
-          ))
-
-          :
-          <p className='text-danger fw-bloder'> No Videos found</p>
-        }
-
- 
-  </Row>
-  </div>
+       {
+        allVideos.length > 0 ?
+        allVideos.map(item=>(
+        // eslint-disable-next-line react/jsx-key
+        <Col sm={4} className='mt-5'>
+        <VideoCard  displayVideo={item}  setDeleteVideoStatus={setDeleteVideoStatus}/>
+        </Col>    
+        ))
+        
+        :
+        <p className="text-danger fw-bolder">No Videos found...</p>
+       }
+      
+      </Row>
+    </div>
   )
 }
 

@@ -54,35 +54,40 @@ header{
 
 }
 
-#home{
-    
+#home
+{
     text-align: center;
 }
-
-#home h1{
-    font-size: 50px;
+#home h1
+{
     color: rgb(51, 24, 4);
+    font-size: 50px;
 }
-
-h2{
-    color: rgb(64,33,11);
+h2
+{
+    color: rgb(64, 33, 11);
     font-size: 40px;
     text-align: center;
 }
- 
-
-#home p{
+#home p
+{
     text-align: justify;
-    color: rgb(69, 12 , 12);
+    color: rgb(69, 12, 12);
     width: 600px;
     height: auto;
     border: 5px;
     border-style: groove;
     border-color: rgb(96, 69, 49);
     padding: 20px;
-    
+    font-size: 20px;
+    transition: width 1s, height 1s, font-size 1s;
 }
-
+#home p:hover
+{
+    width: 700px;
+    height: auto;
+    font-size: 30px;
+}
 
 #i{
     justify-content: space-evenly;
@@ -112,46 +117,50 @@ a:hover{
 }
 
 
-#section1 p{
-    position: absolute;
-    top: 90%;
+.about {
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+}
+
+.disContent {
+    margin: 40px 0px 0px 100px;
+    width: 50%;
+    color: black;
     text-align: justify;
-    left: 5%;
-    padding-right: 700px;
-    color: white;
-    font-weight: 500;
-    border: 3px;
-    border-color: rgb(187, 119, 67);
+}
+.disContent h1 {
+    color:  #532c00 ;
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+#disContent p {
+    color: black;
+    padding-bottom: 40px;
+    font-size: 25px;
+    border: 5px;
+    border-style: groove;
+    border-color: rgb(96, 69, 49);
+    
+}
+#disImage {
+    width: 50%;
 }
 
-#section1 p:hover{
-    width: 800px;
-    height: auto;
-    font-size: 30px;
-}
-
-#section1 h1{
+.overlayImage {
+    width: 300px;
     position: absolute;
-    top: 80%;
-    left: 20%;
-    font-weight: 500;
-    font-family: "Oswald", sans-serif;
-    font-size: large;
-    color: white;
-}
-
-#section1 h1:hover{
-    width: 800px;
-    height: auto;
-    font-size: 30px;
+    transform: translateY(-60%);
 }
 
 
 #types
 {
     border: black;
-    margin-top: 50px;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 10px;
     text-align: justify;
     font-size: 22px;
     background-color: rgba(64, 43, 34, 0.422);
@@ -171,7 +180,7 @@ a:hover{
 
 #types h3{
     text-align: center;
-}
+} 
 
 
  #about img{
@@ -205,7 +214,7 @@ a:hover{
  width: 350px;
  height: auto;
  margin: 15px;
- margin: 10px;
+ margin: 20px;
  border-radius: 10px;
  transition: width 2s, height 1.5s, transform 1s;
 }
@@ -213,15 +222,6 @@ a:hover{
 .d div
 {
     width: 60%;
-}
-.d img
-{
-    width: 350px;
-    height: auto;
-    margin: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    transition: width 2s, height 1.5s, transform 1s;
 }
 
 .d img:hover
@@ -295,7 +295,7 @@ footer
     margin: 20px;
     font-size: 16px;
 }
-.col h5
+.col h4
 {
     font-size: 20px;
     color: rgb(69, 0, 0);
@@ -317,204 +317,121 @@ footer
 }
 
 
-@media (max-width: 500px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    .header-name {
-        font-size: 25px;
-    }
-
-    #header-button {
-        font-size: 16px;
-
-
-    }
-
-    .about-image {
-        width: 100%;
-        padding: 5px;
-        border-radius: 3px;
-    }
-
-    #heading-div {
+/* Media Query for screen width 492px and below */
+@media screen and (max-width: 492px) {
+    header img {
         height: 60px;
-        margin-top: 20px;
+        width: 60px;
     }
 
-    #heading-div h2 {
-        font-size: 20px;
-        height: 50px;
-        padding: 5px;
-        box-shadow: 5px 5px;
-    }
-
-    #banner img {
-        height: 300px;
-
-    }
-
-    #caffaine h3 {
-        margin-top: 140px;
-        left: 40%;
+    header h3 {
         font-size: 16px;
     }
 
-    #carousel-head-container {
-        height: 50px;
+    nav ul {
+        display: flex;
+        padding: 0px;
     }
 
-    #carousel-heading {
-        font-size: 30px;
-        margin-top: 10px;
+    nav ul li {
+        margin: 3px 0;
     }
 
-    .carousal1 img {
-        width: 100%;
-    }
-
-    #carousal-heading1,
-    #carousal-heading2,
-    #carousal-heading3 {
-        width: 40%;
-        font-size: 14px;
-        padding: 5px;
-        line-height: 18px;
-    }
-
-    #carousal-heading1 {
-        top: 20%;
-        left: 50%;
-        transform-origin: right;
-    }
-
-    #carousal-heading2,
-    #carousal-heading3 {
-        top: 35%;
-        left: 5%;
-        transform-origin: left;
-    }
-
-    #coffee {
-        height: 1000px;
-    }
-
-    #coffee h1 {
-        font-size: 30px;
-    }
-
-    #coffee h2 {
+    section#home h1 {
         font-size: 20px;
     }
 
-    #coffee-content {
-        width: 80%;
-
-        margin-left: 10%;
-        padding: 5px;
+    section#home h2 {
+        font-size: 16px;
     }
 
-    #coffee-para {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    #about-coffee-heading {
-        font-size: 30px;
-        margin-top: -20px;
-    }
-
-    #about-coffee-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #about-coffee-content img {
-        width: 300px;
-    }
-
-    #about-coffee-para {
-        width: 90%;
-        padding-right: 0;
-    }
-
-
-
-    .type1 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #type3 img,
-    #type4 img {
-        width: 100%;
-        height: auto;
-        padding: 5px;
-    }
-
-
-
-    .row {
-        flex-direction: column;
-
-    }
-
-    .col {
-        padding-top: 20px;
-        margin: 10px 0;
-    }
-
-
-    .col img {
-        width: 100%;
-        height: auto;
-    }
-
-    .col h3 {
-        font-size: 18px;
-    }
-
-    .col p {
+    section#home p {
         font-size: 14px;
     }
 
 
+    .about{
+        flex-direction: column;
+    }
 
-    .gallery {
+    .about .disContent {
+        padding: 10px;
+        font-size: large;
+    }
+
+    .about .disImage img {
+        width: 100%;
+        height: auto;
+    }
+
+    .d {
+        display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .d img {
+        width: 100%;
+        height: auto;
     }
 
     .gallery img {
-        width: 80%;
-        padding: 10px;
-    }
-
-    .form {
-        width: 90%;
-        margin-left: 5%;
-        padding: 20px;
-    }
-
-    .contact Us button {
         width: 100%;
-        margin: 20px 0 0 0;
-        font-size: 18px;
+        height: auto;
     }
 
-    #footer {
-        flex-direction: column;
-        align-items: center;
-        height: 660px;
-        padding: 10px;
+
+    form {
+        margin: 10px;
+        padding: 0px 20px; 
+    }
+
+    label {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    td {
+        padding-bottom: 10px; 
+    }
+
+    button {
+        width: 100%; 
+        height: 40px; 
+        font-size: large; 
+    }
+
+    footer {
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .col {
-        width: 90%;
-        margin: 5px 0;
+        flex-direction: column; 
+        margin: 10px 0px; 
+        text-align: center; 
     }
 
+    .col h4 {
+        font-size: 18px; 
+    }
+
+    .col ul {
+        padding: 0px; 
+    }
+
+    .col i {
+        padding: 5px; 
+    }
+
+    .col li {
+        justify-content: center; 
+        margin-bottom: 5px; 
+    }
+
+    .col p {
+        line-height: 1.5; 
+    }
 
 }
+

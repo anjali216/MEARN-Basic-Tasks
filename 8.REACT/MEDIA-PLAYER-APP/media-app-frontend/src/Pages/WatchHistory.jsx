@@ -1,64 +1,79 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-import Row from 'react-bootstrap/esm/Row'
-import Col from 'react-bootstrap/esm/Col'
-import { FaBackward } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
+import React, { useEffect, useState } from 'react'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import { Link } from 'react-router-dom'
+import { deleteHistoryAPI, getHistoryAPI } from '../Services/AllAPIs'
+
+
 function WatchHistory() {
+
+  const [history,setHistory] = useState([])
+  
+  const [deleteStatus,setDeleteStatus]=useState("")
+  const getWatchHistory =async() => {
+      const response = await getHistoryAPI()
+      console.log(response.data);
+      setHistory(response.data)
+  }
+
+  const handleDelete = async(id)=>{
+      const response = await deleteHistoryAPI(id)
+      console.log(response);
+      setDeleteStatus(response)
+  }
+
+
+   useEffect(()=>{
+   getWatchHistory()
+   },[deleteStatus])
+
+
+
   return (
     <div>
-       <Row className='mt-5'>
-        <Col>
-        <h1>Watch History</h1>
+      <Row >
+        <Col className='mt-5'>
+        <h3>Watch History</h3>
         </Col>
         <Col className='me-3'>
         <Link to={'/'}>
-          <h5 style={{float :'right'}}>Back to Home <FaBackward /> </h5>
-           </Link>
+        <h5 style={{float:'right'}}>Back to Home <i className="fa-solid fa-backward fs-3"></i></h5> 
+        </Link>
         </Col>
       </Row>
 
       <Row className='p-5'>
-      <Table className="border border-white">
+      <table className='border border-white'>
       <thead>
         <tr className='border border-white'>
-          <th className='border border-white'>sl.no</th>
+          <th className='border border-white'>SLno</th>
           <th className='border border-white'>Caption</th>
-          <th className='border boder-white'>Url</th>
-          <th className='border border-white'>TimeStamp</th>
+          <th className='border border-white'>URL</th>
+          <th className='border border-white'>Timestamp</th>
           <th className='border border-white'>Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr className='border border-white'>
-          <td className='border border-white'>1</td>
-          <td className='border border-white' >Mark</td>
-          <td className='border border-white' >Otto</td>
-          <td className='border border-white'>@mdo</td>
-          <td className='border border-white'>
-          <i className='btn btn-danger fa-solid fa-trash text-white m-3'></i>  
+       {
+        history?  history.map((item,index)=>(
+          // eslint-disable-next-line react/jsx-key
+          <tr className='border border-white'>
+          <td className='border border-white text-center'>{index+1}</td>
+          <td className='border border-white text-center'>{item.caption}</td>
+          <td className='border border-white '><a href={item.embedLink}>{item.embedLink}</a></td>
+          <td className='border border-white text-center'>{item.timestamp}</td>
+          <td className='border border-white text-center'>
+            <i onClick={()=>handleDelete(item.id)} className='btn btn-danger  fa-solid fa-trash text-white m-3' ></i>
           </td>
         </tr>
-        <tr>
-          <td className='border border-white' >2</td>
-          <td className='border border-white'>Jacob</td>
-          <td className='border border-white'>Thornton</td>
-          <td className='border border-white' >@fat</td>
-          <td className='border border-white'>
-          <i className='btn btn-danger fa-solid fa-trash text-white m-3'></i>  
-          </td>
-        </tr>
-        <tr>
-          <td className='border border-white'>3</td>
-          <td className='border border-white'  colSpan={2}>Larry the Bird</td>
-          <td className='border border-white'>@twitter</td>
-          <td className='border border-white'>
-          <i className='btn btn-danger fa-solid fa-trash text-white m-3'></i>  
-          </td>
-        </tr>
+        ))
+
+      : <p className='text-danger fw-bolder'>No data found</p>
+       }
+ 
       </tbody>
-    </Table>
+    </table>
       </Row>
     </div>
   )
