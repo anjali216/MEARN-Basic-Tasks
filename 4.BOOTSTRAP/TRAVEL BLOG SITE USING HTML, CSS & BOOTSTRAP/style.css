@@ -48,13 +48,17 @@ header ul li a{
 }
 
 
+
+
+
 .home{
-    position: relative;
+     position: relative;
     width: 100px;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(1,ifr);
-    align-items: center;
+    align-items: center; 
+    
 }
 
 
@@ -96,7 +100,6 @@ header ul li a{
     padding: 0%;   
 }
 
-
 .gallery
 {
     padding: 20px 50px;
@@ -121,15 +124,12 @@ header ul li a{
     transition: 1s;
 }
 
-
     
 .gallery img:hover
 {
     transform: scale(1.2);
     z-index: 1;
 }
-
-
 
 form{
     margin: 20px;
@@ -140,6 +140,7 @@ form{
  h3{
     text-decoration: underline;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 td{
@@ -159,6 +160,4 @@ button{
     color: white;
     background-color: black;
 }
-
-
 

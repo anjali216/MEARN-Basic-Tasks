@@ -1,51 +1,106 @@
-body{
+body {
     display: flex;
-    height: 100vh;
-    width: 500px;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    height: 100vh;
+    background-color:#d0d0d0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.cal{
-        border: 2px solid #ccc;
-        border-radius: 10px;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.cal {
+    border-radius: 20px;
+    padding: 30px;
+    background-color:  rgb(159, 158, 158) ;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);
+    text-align: center;
 }
 
 #result {
     width: 90%;
-    height: 40px;
+    height: 50px;
     font-size: 1.5em;
     text-align: right;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 button {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
+    width: 70px;
+    height: 70px;
+    margin: 8px;
     font-size: 1.5em;
     border: none;
-    border-radius: 5px;
-    background-color: #e0e0e0;
+    border-radius: 15px;
+    background-color: #f0f0f0;
     cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #d0d0d0;
+    background-color: #e0e0e0;
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
-    background-color: #b0b0b0;
+    background-color: #d0d0d0;
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#equal {
+    background-color: #212020;
+    color: white;
+}
+
+#equal:hover {
+    background-color: #302121;
+}
+
+#equal:active {
+    background-color: #302121;
+}
+
+#del, #ac {
+    background-color: #212020;
+    color: white;
+}
+
+#del{
+    margin-left: -265px;
+}
+
+#del:hover,
+#ac:hover {
+    background-color: #302121;
+}
+
+#del:active,
+#ac:active {
+    background-color: #322222;
 }
 
 
+/* Additional media query for responsiveness */
+@media (max-width: 500px) {
+    .calculator {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2em;
+    }
+
+    #result {
+        font-size: 1.5em;
+    }
+}

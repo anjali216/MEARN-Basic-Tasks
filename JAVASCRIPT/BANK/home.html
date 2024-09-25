@@ -13,7 +13,59 @@
             height: 100vh;
 
         }
-        
+        /* Media Query for devices with max-width of 450px */
+        @media (max-width: 450px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .navbar-brand img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .welcome-container h1, 
+            .welcome-container h3 {
+                font-size: 18px;
+            }
+
+            .col-5 {
+                width: 100% !important;
+                padding: 10px !important;
+                margin: 10px 0 !important;
+            }
+
+            .form-control {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 16px;
+            }
+
+            #balanceDisplay {
+                font-size: 16px;
+            }
+
+        footer .row .col-4 ul {
+          padding-left: 0;
+          text-align: center;
+        }
+        footer .row .col {
+          text-align: center;
+        }
+        footer .row {
+          flex-direction: column;
+        }
+        }
    </style>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

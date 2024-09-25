@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key */
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -62,13 +61,13 @@ function AddCategory() {
     const videoId = e.dataTransfer.getData("videoId")
     console.log("VideoId: "+videoId);
     e.preventDefault();
-    //get a particular video
+    
     const {data} = await getAVideoAPI(videoId)
     console.log(data);
-    //get category details
+  
     const selectedCategory = getCategory?.find(item=>item.id===categoryId)
     console.log(selectedCategory);
-    //add videos into the allVideos category
+    
     selectedCategory.allVideos.push(data)
     await updateCategoryAPI(categoryId, selectedCategory)
     handleGetCategory()
@@ -102,7 +101,7 @@ function AddCategory() {
           <div className='row' style={{width:'100%'}}>
           <div className="col" >
           {item.allVideos && item.allVideos.map((data)=>(
-<VideoCard displayVideo={data} />
+          <VideoCard displayVideo={data} />
           ))}
           </div>
           </div>

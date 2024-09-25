@@ -1,0 +1,7 @@
+
+Rest APIs for fetching
+
+https://restcountries.com/
+
+
+https://fakestoreapi.com/

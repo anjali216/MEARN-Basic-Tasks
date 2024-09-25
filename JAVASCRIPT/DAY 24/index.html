@@ -3,111 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Country Search </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-        .container {
-            width: 400px;
-            padding: 20px;
-            margin: auto;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .input-box, .search-box {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .btn {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            background-color: #000000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+
+        body {
+            /* //background: linear-gradient(135deg, #c4b8b0, white); */
+            background: lightblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
         }
-        .btn:hover {
-            color: #ffffff;
-            background-color: #f70000;
+
+
+         .container {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: blanchedalmond; 
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        } 
+        
+        .button {
+            width: 100%;
+            padding: 10px 30px;
+            margin-top: 10px;
+            color: rgb(112, 65, 65);
+            background-color: #ff7f50;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
+
+        .button:hover {
+            background-image: linear-gradient(135deg, #ff6347 0%, #ff4500 100%);
+            box-shadow: 0px 15px 20px rgba(255, 99, 71, 0.4);
+            transform: translateY(-5px);
+        }
+
+        #searchCountry{
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border-radius: 8px;
+            color: #333;
+            font-size: 1 rem;
+            margin-bottom: 15px;
+            transition: border 0.3s ease;
+        } 
+
+         /* Result Container */
+         #result {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card img {
+            border-radius: 8px;
+        }
+
         img{
             margin: 10px;
             
         }
-        h2{
-            text-align: center;
-        }
+       h1{
+       color: #f06832;
+        font-weight: 700;
+        margin-bottom: 30px;
+        font-size: 2.2rem;
+       }
+      
     </style>
 </head>
+
+
 <body>
-
-
-    <!-- <div class="d-flex justify-content-center align-items-center full-height ">
-        <div class=" border m-3 p-3 w-25  shadow bg-body-tertiary rounded">
-            
-                <div class=" mb-3 ">
-                    <input type="text" class="form-control w-100" id="registerUsername" placeholder="India">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control w-75" id="registerPassword" placeholder="Search">
-                </div>
-            
-        </div>
-    </div>  -->
-    
-    
     <div class="container">
-        <h2>COUNTRY SEARCH</h2>
-        <input id="countryName" type="text" class="input-box" placeholder="enter country name">
-       
-        <button onclick="search()" class="btn">Search</button>
-        <div id="countryDetails"></div>
+        <h1>Country Search</h1>
+        <div class="input-group justify-content-center">
+            <input type="text" class="form-control" id="searchCountry" placeholder="Search for a country...">
+        </div>
+        <!--Button for Searching-->
+        <button class="btn text-primary" onclick="searchCountry()">Search</button>
+        <div id="result" class="d-flex flex-wrap justify-content-center"></div>
     </div>
+
+     
     
     <script>
-       function search() {
-            const countryName = document.getElementById('countryName').value;
-            fetchCountryDetails(countryName);
+       function searchCountry() {
+            const countryName = document.getElementById('searchCountry').value;
+            if(countryName){
+                fetch('https://restcountries.com/v3.1/name/india?fullText=true')
+                .then(response => response.json())
+                .then(countries => displayContent(countries))
+                .catch(error => alert('Could not fetch data.'));
+            }
         }
     
-        function fetchCountryDetails(country) {
         
     
-            fetch('https://restcountries.com/v3.1/name/india?fullText=true')
-                .then(response => response.json())
-                .then(country => {
-                    displayCountryDetails(country[0]);
-                })
-              
+        function displayContent(countries) {
+            const result = document.getElementById('result');
+            countries.forEach(country => {
+                const htmlData = `
+                    <div class="card m-3" style="width: 18rem;">
+                        <img src="${country.flags.png}" class="card-img-top" alt="${country.name.common} flag">
+                        <div class="card-body">
+                            <h4 class="card-title">${country.name.common}</h4>
+                            <p class="card-text">Capital: ${country.capital}</p>
+                            <p class="card-text">Region: ${country.region}</p>
+                            <p class="card-text">Population: ${country.population.toLocaleString()}</p>
+                            <p class="card-text">Timezone: ${country.timezones.join(', ')}</p>
+                            <h5 class="mt-3">Coat of Arms</h5>
+                            <div class="coat-of-arms-container">
+                                <img src="${country.coatOfArms.png}" class="coat-of-arms" alt="Coat of arms">
+                            </div>
+                        </div>
+                    </div>
+                `;
+                result.innerHTML += htmlData;
+            });
         }
-    
-        function displayCountryDetails(country) {
-            const countryDetailsDiv = document.getElementById('countryDetails');
-            countryDetailsDiv.innerHTML = `
-                <h1>${country.name.common}</h1>
-                <p>Capital: ${country.capital[0]}</p>
-                <p>Region: ${country.region}</p>
-                <p>Population: ${country.population}</p>
-                <p>Area: ${country.area} sq km</p>
-                <p>TimeZones: ${country.timezones}</p>
-                <img src="${country.flags.svg}" alt="Flag of ${country.name.common}" width="100">
-                
-               <img  src="${country.coatOfArms.svg}" alt=" ${country.name.common}" width="50">
-              
-            `;
-        }
-    </script>
-    
-    
-    
-         
+               
+            
+        
+    </script>     
 
 </body>
 </html>

@@ -1,57 +1,57 @@
 /* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react'
-import VideoCard from './VideoCard'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { getVideoAPI } from '../Services/AllAPIs';
+/* eslint-disable react/jsx-key */
+import  { useEffect, useState } from 'react'
+import VideoCard from'./VideoCard'
+import { Row,Col } from 'react-bootstrap'
+import { getVideoAPI } from '../Services/AllAPIs'
 
 function ViewVideo({addVideoResponse}) {
 
-  const [allVideos,setAllVideos] = useState([]) 
-  const [deleteVideoStatus,setDeleteVideoStatus] = useState("")
+const[allVideos,setallVideos]=useState([])
+const [deleteVideoStatus,setDeleteVideoStatus] = useState("")
 
-  const getVideos =async()=>{
-   try{
-    const response = await getVideoAPI()
-    console.log(response.data);
-    if(response.status>=200 && response.status<=300){
-        setAllVideos(response.data)//to assign videos to the state
-    }
-    else{
-      console.log(response.message);//error message
-      
-    }
-   }
-   catch(err){
-    console.log(err);
-    
-   }
+
+const getVideos = async()=>{
+ try{
+  const response = await getVideoAPI()
+ console.log(response.data);
+ if(response.status>=200 && response.status<=300){
+  setallVideos(response.data)
+  }else{
+    console.log((response.message));
     
   }
-  useEffect(()=>{
-    getVideos()
-  },[addVideoResponse,deleteVideoStatus])
+ }
+ catch(err){
+  console.log(err);
+  
+ }
+} 
 
-  return (
-    <div>
-      <Row className='p-5'>
-       {
-        allVideos.length > 0 ?
-        allVideos.map(item=>(
-        // eslint-disable-next-line react/jsx-key
-        <Col sm={4} className='mt-5'>
-        <VideoCard  displayVideo={item}  setDeleteVideoStatus={setDeleteVideoStatus}/>
-        </Col>    
-        ))
-        
-        :
-        <p className="text-danger fw-bolder">No Videos found...</p>
-       }
+useEffect(()=>{
+  getVideos()
+},[addVideoResponse,deleteVideoStatus])
+
+
+return (
+  <div>
+    <Row className='p-5 '>
+     {
+      allVideos.length > 0 ?
+      allVideos.map(item=>(
       
-      </Row>
-    </div>
-  )
+      <Col  sm={4}  className='mt-5'>
+      <VideoCard  displayVideo={item}    setDeleteVideoStatus={setDeleteVideoStatus}  />
+      </Col>    
+      ))
+      
+      :
+      <p className="text-danger fw-bolder">No Videos found...</p>
+     }
+    
+    </Row>
+  </div>
+)
 }
 
 export default ViewVideo

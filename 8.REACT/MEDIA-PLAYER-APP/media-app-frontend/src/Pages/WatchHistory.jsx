@@ -1,32 +1,34 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react'
+/* eslint-disable react/jsx-key */
+import  { useEffect, useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import { Link } from 'react-router-dom'
-import { deleteHistoryAPI, getHistoryAPI } from '../Services/AllAPIs'
-
+import { deleteHistoryAPI,getHistoryAPI } from '../Services/AllAPIs'
+import Button from 'react-bootstrap/Button';
+import { RiDeleteBinLine } from "react-icons/ri";
 
 function WatchHistory() {
 
   const [history,setHistory] = useState([])
-  
   const [deleteStatus,setDeleteStatus]=useState("")
+
+  
   const getWatchHistory =async() => {
       const response = await getHistoryAPI()
       console.log(response.data);
       setHistory(response.data)
   }
 
-  const handleDelete = async(id)=>{
-      const response = await deleteHistoryAPI(id)
-      console.log(response);
+   const handleDelete = async(id)=>{
+       const response = await deleteHistoryAPI(id)
+       console.log(response);
       setDeleteStatus(response)
-  }
+   }
 
 
-   useEffect(()=>{
-   getWatchHistory()
-   },[deleteStatus])
+  useEffect(()=>{
+    getWatchHistory()
+  },[deleteStatus])
 
 
 
@@ -57,14 +59,13 @@ function WatchHistory() {
       <tbody>
        {
         history?  history.map((item,index)=>(
-          // eslint-disable-next-line react/jsx-key
           <tr className='border border-white'>
           <td className='border border-white text-center'>{index+1}</td>
           <td className='border border-white text-center'>{item.caption}</td>
           <td className='border border-white '><a href={item.embedLink}>{item.embedLink}</a></td>
           <td className='border border-white text-center'>{item.timestamp}</td>
           <td className='border border-white text-center'>
-            <i onClick={()=>handleDelete(item.id)} className='btn btn-danger  fa-solid fa-trash text-white m-3' ></i>
+          <Button onClick={()=>handleDelete(item.id)}  variant ="danger"> <RiDeleteBinLine /> </Button>
           </td>
         </tr>
         ))
