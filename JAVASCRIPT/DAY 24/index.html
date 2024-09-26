@@ -7,10 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-
-        body {
-            /* //background: linear-gradient(135deg, #c4b8b0, white); */
-            background: lightblue;
+  body {
+            background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             min-height: 100vh;
@@ -20,72 +18,79 @@
             
         }
 
-
-         .container {
-            padding: 50px 20px;
+        h1 {
             text-align: center;
-            background-color: blanchedalmond; 
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        } 
-        
-        .button {
-            width: 100%;
-            padding: 10px 30px;
-            margin-top: 10px;
-            color: rgb(112, 65, 65);
-            background-color: #ff7f50;
+            color: #f06832;
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-top: 20px;
+        }  
+       
+
+        .input-group {
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        input[type="text"] {
+            height: 50px;
+            font-size: 1.2rem;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
             border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1rem;
-            text-transform: uppercase;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-align: center;
         }
 
-        .button:hover {
-            background-image: linear-gradient(135deg, #ff6347 0%, #ff4500 100%);
-            box-shadow: 0px 15px 20px rgba(255, 99, 71, 0.4);
-            transform: translateY(-5px);
+        button:hover {
+            background-color: #0056b3;
         }
 
-        #searchCountry{
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            border-radius: 8px;
-            color: #333;
-            font-size: 1 rem;
-            margin-bottom: 15px;
-            transition: border 0.3s ease;
-        } 
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
 
-         /* Result Container */
-         #result {
-            margin-top: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .card:hover {
+            transform: scale(1.05);
         }
 
         .card img {
-            border-radius: 8px;
+            border-bottom: 1px solid #dee2e6;
         }
 
-        img{
-            margin: 10px;
-            
+        .coat-of-arms-container {
+            text-align: center;
+            margin-top: 15px;
         }
-       h1{
-       color: #f06832;
-        font-weight: 700;
-        margin-bottom: 30px;
-        font-size: 2.2rem;
-       }
-      
+
+        .coat-of-arms {
+            max-width: 80px;
+            height: auto;
+        }
+
+        .card-title {
+            color: #007bff;
+        }
+
+        .card-text {
+            color: #495057;
+        }
+
+        #result {
+            margin-top: 30px;
+        }
+
+        
     </style>
-</head>
+        
 
 
 <body>
@@ -105,7 +110,7 @@
        function searchCountry() {
             const countryName = document.getElementById('searchCountry').value;
             if(countryName){
-                fetch('https://restcountries.com/v3.1/name/india?fullText=true')
+                fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
                 .then(response => response.json())
                 .then(countries => displayContent(countries))
                 .catch(error => alert('Could not fetch data.'));
@@ -116,6 +121,7 @@
     
         function displayContent(countries) {
             const result = document.getElementById('result');
+            result.innerHTML = '';
             countries.forEach(country => {
                 const htmlData = `
                     <div class="card m-3" style="width: 18rem;">
@@ -126,7 +132,6 @@
                             <p class="card-text">Region: ${country.region}</p>
                             <p class="card-text">Population: ${country.population.toLocaleString()}</p>
                             <p class="card-text">Timezone: ${country.timezones.join(', ')}</p>
-                            <h5 class="mt-3">Coat of Arms</h5>
                             <div class="coat-of-arms-container">
                                 <img src="${country.coatOfArms.png}" class="coat-of-arms" alt="Coat of arms">
                             </div>
@@ -136,10 +141,7 @@
                 result.innerHTML += htmlData;
             });
         }
-               
-            
-        
-    </script>     
-
+    </script>
 </body>
+
 </html>
