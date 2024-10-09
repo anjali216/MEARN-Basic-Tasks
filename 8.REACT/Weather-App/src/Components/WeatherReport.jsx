@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import axios from 'axios';
-import bgimg from '../assets/storm.jpg'
+import bgimg from '../assets/light.jpeg'
 
 function WeatherReport() {
     const [city, setCity] = useState('');

@@ -24,15 +24,23 @@ const EditBook = () => {
       <h2>Edit Book</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formTitle">
-        <Form.Label>Title</Form.Label>
-        <Form.Control type="text" value={title} onChange={(e) => setTitle(e.target.value)}  
-        placeholder="Enter book title" />
+          <Form.Label>Title</Form.Label>
+          <Form.Control 
+            type="text" 
+            value={title} 
+            onChange={(e) => setTitle(e.target.value)} 
+            placeholder="Enter book title" 
+          />
         </Form.Group>
         
         <Form.Group className="mb-3" controlId="formAuthor">
           <Form.Label>Author</Form.Label>
-          <Form.Control  type="text"  value={author} onChange={(e) => setAuthor(e.target.value)} 
-          placeholder="Enter author name" />
+          <Form.Control 
+            type="text" 
+            value={author} 
+            onChange={(e) => setAuthor(e.target.value)} 
+            placeholder="Enter author name" 
+          />
         </Form.Group>
         
         <Button variant="primary" type="submit">

@@ -12,6 +12,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
             state.books.push(action.payload)
 
+
         },
 
         editBook: (state, action) => {
@@ -25,8 +26,8 @@ import { createSlice } from "@reduxjs/toolkit";
           deleteBook: (state, action) => {
             state.books = state.books.filter((book) => book.id !== action.payload);
           },
-    },
 
+    },
 
  })
 

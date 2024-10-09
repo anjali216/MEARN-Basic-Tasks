@@ -61,6 +61,10 @@ REACT
       Links:-https://react-icons.github.io/react-icons/
      Installation :npm install react-icons --save
 
+7 React-Toastify 
+                Site : https://www.npmjs.com/package/react-toastify     
+                Install : npm i react-toastify
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
             BASICS CONCEPTS
@@ -175,7 +179,7 @@ Backend for PROJECT FAIR
 
 3)Models: to define Scheme and model for mongodb client using  mongoose
     ->Create a folder
-    ->Craete a js file to define schema and model for mongodb collection
+    ->Create a js file to define schema and model for mongodb collection
 
                    MONGOOSE
 ------------------------ --------------------------------------------------------------------------------------------------------------------------------------------
@@ -188,11 +192,13 @@ Backend for PROJECT FAIR
 Install npm  i mongoose
 
 ->Schema: Structure of the document that we want to store in a collection 
-->Model:
+->Model: Copy of colection in mongodb
     
 
 
-
+7 React-Toastify 
+                Site : https://www.npmjs.com/package/react-toastify     
+                Install : npm i react-toastify
 
 
 
@@ -224,3 +230,82 @@ MVC Architecture
     When an end user makes a request, it’s sent to the controller which interacts with the database.
 
     You can think of the controller as a waiter in a restaurant that handles customers’ orders, which in this case is the view. The waiter then goes to the kitchen, which is the model/database, and gets food to serve the customers, which is the controller handling the request.
+
+
+		jsonwebtoken
+-------------------------------------------------------------------------------
+->Its used for authentication purpose
+->Its  used to securely transfer information over the internet
+->JWT to sign  token sign and send it back to the user on a successful login
+->Token creation using JWT : use sign() method
+      sign(payload,password)
+  ->payload: Its the datathat we want to storeinside the token
+   ->password : Can be any data that has to be define . env file
+     ->Install : npm i jsonwebtoken
+
+
+-------------------------------------------------------------------------------------------------------
+                        Understanding Middleware in Node.js
+-----------------------------------------------------------------------------------------------------
+Reference:                                 Using Express middleware
+                                http://expressjs.com/en/guide/using-middleware.html
+                                Middleware in Express - GeeksforGeeks
+                                https://www.geeksforgeeks.org/middleware-in-express-js/
+                                A Complete Guide on How to Build Middleware For Node.js.
+                                https://www.turing.com/kb/building-middleware-for-node-js
+-----------------------------------------------------------------------------------------------------
+        ->Middleware in Node.js is a powerful feature used within the Express framework to handle requests and responses. 
+        ->Middleware functions are those that have access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle. ->The next middleware function is commonly denoted by a variable named next.
+
+Key Principles of Middleware
+----------------------------------
+Middleware functions can:
+
+        Execute any code.
+
+        Make changes to the request and response objects.
+
+        End the request-response cycle.
+
+        Call the next middleware function in the stack.
+
+If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+Types of Middleware in Node.js
+
+Application-level middleware: Bound to an instance of the app object using app.use() and app.METHOD().
+
+Router-level middleware: Similar to application-level middleware but bound to an instance of express.Router().
+
+Error-handling middleware: Specifically designed to handle errors, defined with four parameters (err, req, res, next).
+
+Built-in middleware: Comes with Express, such as express.static, express.json, and express.urlencoded.
+
+Third-party middleware: Added functionality from external libraries, like cookie-parser or body-parser.
+
+						Multer
+-------------------------------------------------------------------------------------------------------------
+
+Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+
+NOTE: Multer will not process any form which is not multipart (multipart/form-data)
+
+Install :npm i multer
+
+
+What is Context API?
+
+Context API is used to pass global variables anywhere in the code. It helps when there is a need for sharing state between a lot of nested components. 
+It is light in weight and easier to use, to create a context just need to call React.createContext(). No need to install other dependencies or 
+third-party libraries like redux for state management.
+
+Context API solves the problem of prop drilling in React. Prop Drilling occurs when data is to be passed between multiple layers before finally sending it to the required component. 
+This makes the application slower. This problem is solved by Context API as it creates global variables to be used throughout the application without any middle components involved.
+It is also easier to use than React Redux
+
+
+
+
+
+
+ 

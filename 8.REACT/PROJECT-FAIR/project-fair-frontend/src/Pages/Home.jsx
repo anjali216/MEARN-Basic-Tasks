@@ -1,9 +1,39 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import ProjectCard from '../Components/ProjectCard';
+import {  getHomeProjectsAPI } from '../Services/AllAPIs';
 
 function Home() {
+  const [projects,setProjects] = useState([])
+
+  let token =sessionStorage.getItem('token');
+
+  const getHomeProjects= async()=>{
+    
+      try{
+        const HomeProjects = await getHomeProjectsAPI()
+        console.log(HomeProjects);
+        if(HomeProjects.status==200){
+          setProjects(HomeProjects.data)
+        }
+        else{
+          console.log("Cant get projects");
+          
+        }
+      }
+      catch(error){
+        console.log(error);
+        
+      }
+    }
+
+
+    useEffect(()=>{
+      getHomeProjects()
+    },[])
+  
+
   return (
     <div>
         <section>
@@ -14,10 +44,24 @@ function Home() {
             include science projects, they can also include projects in areas such as history, social studies, art, and technology.
             While some project fairs may include science projects, they can also include projects in areas such as history, social studies, art, and technology.
            </p>
+          
            <div className='text-center'>
-           <Link to={'/login'}>
-            <button className='btn btn-warning'>Get Started</button>
+           {
+           token ?
+           
+           <Link to={'/dashboard'}>
+            <button className='btn btn-warning'>
+              View Dashboard
+            </button>
            </Link>
+           :
+           
+           <Link to={'/login'}>
+            <button className='btn btn-warning'>
+              Get Started
+            </button>
+           </Link>
+           }
            </div>
         </div>
 
@@ -30,10 +74,27 @@ function Home() {
       <section>
      <div className='row'>
      <h1 className='m-3 text-info text-center'>Explore our Projects </h1>
-     <ProjectCard/>
+     {/* <ProjectCard/> */}
+     {
+          projects.length > 0 ? projects.map(item=>(
+            // eslint-disable-next-line react/jsx-key
+            <div className="col m-2">
+          <ProjectCard projects={item}  />
+        </div>
+          ))
+          :<p className='text-danger fw-bolder'>Cant fetch data </p>
+        }
      </div>
 
      </section>
+
+<section>
+     <div className='text-center m-5'>
+     <Link to={'/projects'}>
+     <button className='btn btn-primary'>View Projects</button>
+     </Link>
+     </div>
+  </section>
 
     </div>
   )
