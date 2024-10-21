@@ -63,3 +63,50 @@ exports.getHomeProjects =async (req,res)=>{
        }
 
 }
+
+
+//edit project
+exports.editProject =async(req,res)=>{
+    console.log("inside editProject");
+    const{title,language,website,github,projectImg,overview}=req.body
+ console.log(title,language,website,github,projectImg,overview);   
+    const uploadImg = req.file? req.file.filename:projectImg
+    const userId = req.payload
+    const {projectId} =req.params
+  
+  
+    try{
+        console.log("Inside try");
+        
+   const updateProject = await projects.findByIdAndUpdate({_id:projectId},{title:title,language:language,website:website,github:github,userId:userId,projectImg:uploadImg})
+   console.log(updateProject);
+   
+   await updateProject.save()
+   res.status(200).json(updateProject)
+
+    }
+
+    catch(error){
+    res.status(401).json(error)
+
+    }
+
+}
+
+//DELETE
+
+exports.deleteProject =async(req,res)=>{
+    console.log("inside deleteProject");
+    const {projectId} =req.params
+  
+    try{  
+    await projects.findByIdAndDelete({_id:projectId})
+   res.status(200).json("Project deleted Successfully")
+    }
+
+    catch(error){
+    res.status(401).json(error)
+
+    }
+
+}

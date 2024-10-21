@@ -35,10 +35,6 @@ const Departments=() => {
       imageUrl: "/departments/therapy.jpg",
     },
     {
-      name: "Nephrology",
-      imageUrl: "/departments/kidney.jpg",
-    },
-    {
       name: "Dermatology",
       imageUrl: "/departments/derma.jpg",
     },

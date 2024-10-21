@@ -1,30 +1,58 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
-import {  useState } from "react";
-import { Link } from "react-router-dom";
-
+/* eslint-disable no-unused-vars */
+import axios from "axios";
+import React, { useContext, useState } from "react";
+import { toast } from "react-toastify";
+import { Context } from "../main";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 
 const Login = () => {
-
-  
+  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  
+  const navigateTo = useNavigate();
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await axios
+        .post(
+          "http://localhost:4000/api/v1/user/login",
+          { email, password, confirmPassword, role: "Patient" },
+          {
+            withCredentials: true,
+            headers: { "Content-Type": "application/json" },
+          }
+        )
+        .then((res) => {
+          toast.success(res.data.message);
+          setIsAuthenticated(true);
+          navigateTo("/");
+          setEmail("");
+          setPassword("");
+          setConfirmPassword("");
+        });
+    } catch (error) {
+      toast.error(error.response.data.message);
+    }
+  };
+
+  if (isAuthenticated) {
+    return <Navigate to={"/"} />;
+  }
 
   return (
-    
-   <div className="container form-component login-form">
+    <>
+      <div className="container form-component login-form">
         <h2>Sign In</h2>
         <p>Please Login To Continue</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
           voluptas expedita itaque ex, totam ad quod error?
         </p>
-        <form >
+        <form onSubmit={handleLogin}>
           <input
             type="text"
             placeholder="Email"
@@ -62,9 +90,9 @@ const Login = () => {
             <button type="submit">Login</button>
           </div>
         </form>
-        </div>
-    
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default Login
+export default Login;

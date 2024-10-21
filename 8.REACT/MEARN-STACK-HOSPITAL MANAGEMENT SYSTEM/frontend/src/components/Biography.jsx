@@ -18,8 +18,7 @@ const Biography  = ({imageUrl}) => {
           healthcare services, ensuring every patient receives personalized and tailored care throughout their medical journey.
           </p>
           <p><b> Our Promise!</b></p>
-          {/* <p>We are working on a MERN STACK PROJECT.</p> */}
-          <p>
+         <p>
           ZeeCare Medical Institute is dedicated to being your trusted partner on the journey to optimal health. From diagnosis 
           to treatment and recovery, we ensure that your well-being is our top priority. We invite you to experience our commitment 
           to excellence in healthcare, where we strive for the best outcomes with compassionate care and cutting-edge medical expertise.
