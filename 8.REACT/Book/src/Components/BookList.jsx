@@ -32,8 +32,8 @@ const BookList = () => {
                 <th>ISL No</th>
                 <th>Book Name</th>
                 <th>Author Name</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                 {/* <th>Edit</th> */}
+                <th>Delete</th> 
               </tr>
             </thead>
             <tbody>
@@ -42,11 +42,11 @@ const BookList = () => {
                   <td>{index + 1}</td>
                   <td>{book.title}</td>
                   <td>{book.author}</td>
-                  <td>
+                  {/* <td>
                     <Link  to={`/edit-book/${book.id}`}>
                       <Button  variant="info">Edit</Button>
-                    </Link>
-                  </td>
+                    </Link> */}
+                  {/* </td> */}
                   <td>
                     <Button style={{backgroundColor:'red'}} variant="danger" onClick={() => handleDelete(book.id)}>Delete</Button>
                   </td>

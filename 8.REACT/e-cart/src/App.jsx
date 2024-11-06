@@ -1,30 +1,29 @@
+
+
 import './App.css'
 import Header from './components/Header'
-import Footer from './components/Footer'
-import { Route, Routes,Navigate } from 'react-router-dom'
-import Home from './pages/Home'
-import Wishlist from './Pages/Wishlist'
-import View from './pages/View'
+import Footer from './Components/Footer'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import Wishlist from './pages/Wishlist'
 import Cart from './pages/Cart'
-
-
+import Home from './pages/Home'
+import View from './pages/View'
 
 function App() {
-
+  
 
   return (
     <>
-        <Header/>
-        <Routes>
+      <Header></Header>
+      
+      <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
-      <Route path='/cart' element={<Cart/>}/>
-  <Route path='/view/:id' element={<View/>}/>
-  <Route path='/*' element={<Navigate to={'/'}/>}/>
-
-</Routes>
-
-        <Footer/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/View/:id' element={<View/>}/>
+        <Route path='/*' element={<Navigate to={'/'}/>}/>
+      </Routes>
+      <Footer></Footer>
     </>
   )
 }

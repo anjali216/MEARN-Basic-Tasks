@@ -9,10 +9,10 @@ import cartStore from './redux/cartStore.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-    <Provider store ={cartStore}>
-    <App />
-    </Provider>
-    </BrowserRouter>
+   <BrowserRouter>
+   <Provider store={cartStore}>
+    <App/>
+   </Provider>
+   </BrowserRouter>
   </StrictMode>,
 )

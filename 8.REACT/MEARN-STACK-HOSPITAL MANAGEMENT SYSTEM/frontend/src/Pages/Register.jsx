@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from "react";
 import axios from "axios";
+import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import { Link, Navigate, useNavigate } from "react-router-dom";
@@ -16,6 +16,7 @@ const Register = () => {
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
+  //onChange={(e) => setPassword(e.target.value)}
 
   const navigateTo = useNavigate();
 
@@ -25,24 +26,24 @@ const Register = () => {
       await axios
         .post(
           "http://localhost:4000/api/v1/user/patient/register",
-          { firstName, lastName, email, phone, nic, dob, gender, password },
+          { firstName, lastName, email, phone, nic, dob, gender, password,role:"Patient" },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
           }
         )
-        .then((res) => {
-          toast.success(res.data.message);
-          setIsAuthenticated(true);
-          navigateTo("/");
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setPhone("");
-          setNic("");
-          setDob("");
-          setGender("");
-          setPassword("");
+         .then((res) => {
+           toast.success(res.data.message);
+           setIsAuthenticated(true);
+           navigateTo("/");
+           setFirstName("");
+           setLastName("");
+           setEmail("");
+           setPhone("");
+           setNic("");
+           setDob("");
+           setGender("");
+           setPassword("");
         });
     } catch (error) {
       toast.error(error.response.data.message);
@@ -56,12 +57,9 @@ const Register = () => {
   return (
     <>
       <div className="container form-component register-form">
-        <h2 className="text-center">Sign Up</h2>
+        <h2>Sign Up</h2>
         <p>Please Sign Up To Continue</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
-        </p>
+        
         <form onSubmit={handleRegistration}>
           <div>
             <input
@@ -126,7 +124,8 @@ const Register = () => {
             }}
           >
             <p style={{ marginBottom: 0 }}>Already Registered?</p>
-            <Link to={"/signin"}
+            <Link
+              to={"/login"}
               style={{ textDecoration: "none", color: "#271776ca" }}
             >
               Login Now

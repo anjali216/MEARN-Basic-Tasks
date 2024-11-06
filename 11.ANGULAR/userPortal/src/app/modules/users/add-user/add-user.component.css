@@ -1,0 +1,20 @@
+.sidebar{
+    background-color: rgba(143, 183, 185, 0.502);
+    height: 600px;
+    width: 250px;
+}
+
+.welcome{
+    height: 150px;
+}
+
+
+.admin{
+    width: 300px;
+    height: 300px; 
+    margin-top: 50px;
+}
+
+/* .btn{
+    background-color: rgba(145, 183, blue, alpha);
+} */

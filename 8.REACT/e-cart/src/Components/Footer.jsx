@@ -1,99 +1,96 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon  } from 'mdb-react-ui-kit';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+
 function Footer() {
   return (
-    <>
-     <MDBFooter className='text-center bg-primary '>
-      <section>
+    <div>
+       <MDBFooter  className='text-center bg-primary text-lg-start text-dark'>
+      <section className=''>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
-            <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
+            <MDBCol md="3" lg="4" xl="3" className='mx-auto mt-3 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-              
-             E-Cart
+              <i className='fa-solid fa-truck-fast fa-bounce'></i>
+               <span> </span> E-Cart
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit.
+                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
               </p>
             </MDBCol>
 
-            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mt-3 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Links</h6>
               <p>
-               
-               <Link to={'/'} style={{textDecoration:'none',color:'white'}}>Home</Link>  
-               
+                <a href='#!' className='text-reset'>
+                  Linking Page
+                </a>
               </p>
               <p>
-              <Link to={'Wishlist'} style={{textDecoration:'none',color:'white'}}>Whishlist</Link>  
-               
+                <a href='#!' className='text-reset'>
+                  Home Page
+                </a>
               </p>
               <p>
-              <Link to={'/cart'} style={{textDecoration:'none',color:'white'}}>cart</Link>  
+                <a href='#!' className='text-reset'>
+                  Watch History
+                </a>
               </p>
+              
             </MDBCol>
 
-            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
+            <MDBCol md="3" lg="2" xl="2" className='mx-auto mt-3 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Guides</h6>
               <p>
-             
-              <Link to={'https://bootswatch.com/'} style={{textDecoration:'none',color:'white'}}>React</Link>  
+                <a href='#!' className='text-reset'>
+                  React
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  React Bootstrap
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Bootswatch
+                </a>
               </p>
               
-              <p>
-                
-                <Link to={'https://react-bootstrap.netlify.app/'} style={{textDecoration:'none',color:'white'}}> React Bootstrap</Link>  
-                
-              </p>
-              <p>
-             
-              <Link to={'https://bootswatch.com/'} style={{textDecoration:'none',color:'white'}}>bootsWatch</Link>  
-              </p>
-            
-  
             </MDBCol>
 
-            <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
+            <MDBCol md="4" lg='3' xl="4" className='mx-auto mb-md-0 mt-3 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact Us</h6>
-              <div>
-              
-                <input type='email' id='e_id' placeholder='Enter Your Email ID'></input>
-               
-                
-                <Button variant="warning ">Subscribe</Button>
-                
-                <br></br>
+              <div className='d-flex'><input className='border-0 form-control w-50' type='text' placeholder='enter your email' />
+              <button className='btn btn-warning ms-2'>subscribe</button></div> 
+            <p><div className='mt-3'>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='instagram' />
+            <MDBIcon fab icon="facebook-f" />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='twitter' />
+            <MDBIcon fab icon="twitter" />
+          </a>
+
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="instagram" />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='linkedin' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='facebook-f' />
+            <MDBIcon fab icon="linkedin" />
           </a>
           
-        </div>
+        </div></p>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-         Copyright © 2024 E-cart.
-        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          Build with React
-        </a>
+dev
+        © 2021 Copyright: 2023 E-Cart. Build with react
+       
       </div>
     </MDBFooter>
-    </>
+    </div>
   )
 }
 

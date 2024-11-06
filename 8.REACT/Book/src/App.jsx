@@ -6,7 +6,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import AddBook from './Components/AddBook'
 import BookList from './components/BookList'
-import EditBook from './components/EditBook'
+//import EditBook from './components/EditBook'
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/books' element={<BookList/>}  />
       <Route path='/add-book' element={<AddBook/>}  />
-       <Route path='//edit/:id' element={<EditBook/>}  />
+       {/* <Route path='/edit/:id' element={<EditBook/>}  /> */}
 
 
     </Routes>

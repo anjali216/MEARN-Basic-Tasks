@@ -1,10 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const Departments=() => {
-
+const Departments = () => {
   const departmentsArray = [
     {
       name: "Pediatrics",
@@ -42,8 +41,15 @@ const Departments=() => {
       name: "ENT",
       imageUrl: "/departments/ent.jpg",
     },
+    {
+      name:"Nephrology",
+      imageUrl:"/departments/kidney.jpg",
+    },
+    {
+      name:"Gynacology",
+      imageUrl:"/departments/gynacology.jpg"
+    },
   ];
-
 
   const responsive = {
     extraLarge: {
@@ -68,23 +74,31 @@ const Departments=() => {
     },
   };
 
-
   return (
-    <div className=' container departments'>
-      <h2>Departments</h2>
-      <Carousel responsive={responsive}  removeArrowOnDeviceType={["medium","small"]}
-      >
+    <>
+      <div className="container departments">
+        <h2>Departments</h2>
+        <Carousel
+          responsive={responsive}
+          removeArrowOnDeviceType={[
+            // "superLargeDesktop",
+            // "desktop",
+            "tablet",
+            "mobile",
+          ]}
+        >
           {departmentsArray.map((depart, index) => {
             return (
-              <div key={index} className="card" >
+              <div key={index} className="card">
                 <div className="depart-name">{depart.name}</div>
                 <img src={depart.imageUrl} alt="Department" />
               </div>
             );
           })}
         </Carousel>
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default Departments
+export default Departments;

@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import axios from "axios";
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import { Link, useNavigate, Navigate } from "react-router-dom";
@@ -20,7 +19,7 @@ const Login = () => {
       await axios
         .post(
           "http://localhost:4000/api/v1/user/login",
-          { email, password, confirmPassword, role: "Patient" },
+          { email, password, confirmPassword ,role:"Patient"},
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
@@ -31,8 +30,8 @@ const Login = () => {
           setIsAuthenticated(true);
           navigateTo("/");
           setEmail("");
-          setPassword("");
-          setConfirmPassword("");
+           setPassword("");
+           setConfirmPassword("");
         });
     } catch (error) {
       toast.error(error.response.data.message);
@@ -48,29 +47,14 @@ const Login = () => {
       <div className="container form-component login-form">
         <h2>Sign In</h2>
         <p>Please Login To Continue</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
-        </p>
+       
         <form onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+          <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+         
+          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+         
+          <input  type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
+          
           <div
             style={{
               gap: "10px",
@@ -79,8 +63,7 @@ const Login = () => {
             }}
           >
             <p style={{ marginBottom: 0 }}>Not Registered?</p>
-            <Link
-              to={"/register"}
+            <Link to={"/register"}
               style={{ textDecoration: "none", color: "#271776ca" }}
             >
               Register Now
