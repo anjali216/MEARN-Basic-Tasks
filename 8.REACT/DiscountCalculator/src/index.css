@@ -5,17 +5,17 @@
 }
 
 body{
-    background-color:beige;  
+    background-color:aliceblue;  
 }
 
 
-   .saved{
-    margin-top: 5px;
+   /* .saved{
+    margin-top: 1px;
     background-color:red;
-    border-radius: 5px;
+    border-radius: 1px;
     text-align: center;
     
-  } 
+  }  */
   h1{
     text-align: center;
     padding: 10px;
@@ -37,3 +37,14 @@ body{
   
   }
   
+
+  .total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(117, 176, 184);
+    height: 150px;
+    border-radius: 30px;
+    margin: 20px;
+}

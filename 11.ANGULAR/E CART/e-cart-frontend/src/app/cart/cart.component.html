@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col-8">
+        <h3  class="text-center mt-5">Products in your cart</h3>
+        <table class="table  my-5  shadow">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Product</th>
+                <th scope="col">Image</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>43r34</td>
+                <td>Shirt</td>
+                <td><img src="" alt=""></td>
+                
+                <td>
+                  <div  class="d-flex">
+                    <button class="btn">-</button>
+                    <input type="text" class="form-control"  style="max-width: 45px;" value="3"  readonly>
+                    <button class="btn">+</button>
+                  </div>
+                </td>
+
+                <td><button class="btn"><i class="fa-solid fa-trash  text-danger"></i></button></td>
+               
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+
+    <div class="col-4">
+      <h3 class="text-center m-3 mt-5">Cart Summary</h3>
+
+      <div class="card  p-5 m-5">
+        <h2 class="text-center">Total Price : $000</h2>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            CheckOut
+          </button>
+      </div>
+
+     <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+       <h5 class="modal-title" id="staticBackdropLabel">Payment Form</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+     <div class="modal-body">
+      <input type="text"  placeholder="Name" class="form-control mb-3">
+      <input type="text"  placeholder="Address" class="form-control mb-3">
+      <input type="text"  placeholder="Phone Number" class="form-control mb-3">
+      <h3>Total Price:</h3>
+      <div class="text-center">
+        <button class="btn btn-success">Make Payment</button>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+    </div>
+  
+    </div>   
+    </div> 
+</div>
+
+
+
+<div class="container  text-center">
+  <p>Empty Cart</p>
+</div>

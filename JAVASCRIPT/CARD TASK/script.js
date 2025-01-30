@@ -5,7 +5,7 @@ then(data=>data.json())
 
 function display(user){
   for(users of user ){
-     htmldata=` <ul class=" mt-5   " >
+     htmldata=` <ul class=" mt-5">                                                                                                       
     <li class="list-group-item">id : ${users.id}</li>
     <li class="list-group-item">name : ${users.name}</li>
     <li class="list-group-item">username : ${users.username}</li>

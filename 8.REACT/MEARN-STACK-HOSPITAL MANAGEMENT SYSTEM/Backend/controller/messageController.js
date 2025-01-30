@@ -22,3 +22,5 @@ export const getAllMessages = catchAsyncErrors(async (req, res, next) => {
     messages,
   });
 });
+
+

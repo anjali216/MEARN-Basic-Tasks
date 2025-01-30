@@ -49,8 +49,7 @@ function ViewUser({data}) {
                    <MDBCardText><strong>Job</strong> : {item.company.title} </MDBCardText>
                    <MDBCardText><strong>Address</strong> : {item.address.address} </MDBCardText>
                    <MDBCardText><strong>City</strong> : {item.address.city}</MDBCardText>
-        
-        {/* <Link to={/user/view/${id}}> </Link> */}
+     
         <MDBBtn href='#'>View User</MDBBtn> 
       </MDBCardBody>
     </MDBCard>

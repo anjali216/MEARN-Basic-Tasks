@@ -39,7 +39,7 @@ const [amount,setAmount]=useState(0);
           <h1 className='text-center '>Discount Calculator</h1>
 
 
-          <div className='bg-light border border-light rounded p-5 shadow w-75 mx-auto'>
+          <div className=' border bg-info border-radius rounded p-5 shadow w-75 mx-auto'>
           <h2>&#x20B9;{discount}</h2>
           <p>Discounted Price</p>
           </div>
@@ -51,7 +51,7 @@ const [amount,setAmount]=useState(0);
               <TextField id="outlined-basic" value={discountpercentage ||""} onChange={(e)=>setdiscountpercentage(e.target.value)} label="Discount %" variant="outlined" /> <br />
               </div>
               
-            <div className="saved">
+            <div className="total">
             <h1>&#x20B9;{saved}</h1>
             <p>You Saved</p>
           </div> 

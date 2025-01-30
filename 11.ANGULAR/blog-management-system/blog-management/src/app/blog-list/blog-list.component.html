@@ -1,0 +1,10 @@
+<div class="blog-list">
+  <h2>Blog Posts</h2>
+  <ul>
+    <li *ngFor="let blog of blogs">
+      <h3>{{ blog.title }}</h3>
+      <p>{{ blog.content }}</p>
+      <button (click)="deleteBlog(blog.id)">Delete</button>
+    </li>
+  </ul>
+</div>

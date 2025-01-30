@@ -16,7 +16,6 @@ const Register = () => {
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
-  //onChange={(e) => setPassword(e.target.value)}
 
   const navigateTo = useNavigate();
 

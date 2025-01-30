@@ -131,6 +131,12 @@
       "name": "achu1",
       "email": "achu1@gmail.com",
       "active": "1"
+    },
+    {
+      "id": "10",
+      "name": "achuanju",
+      "email": "achuanj@gmail.com",
+      "active": "0"
     }
   ]
 }
